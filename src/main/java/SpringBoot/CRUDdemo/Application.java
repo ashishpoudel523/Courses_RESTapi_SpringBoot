@@ -3,6 +3,8 @@ package SpringBoot.CRUDdemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
+//1st class after spring boot creation
 @SpringBootApplication
 public class Application {
 
