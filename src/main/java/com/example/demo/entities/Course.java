@@ -1,6 +1,12 @@
 package com.example.demo.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity //creates table in database
 public class Course {
+	
+	@Id    //it makes primary key
 	private long  id;
 	private String title;
 	private String description;

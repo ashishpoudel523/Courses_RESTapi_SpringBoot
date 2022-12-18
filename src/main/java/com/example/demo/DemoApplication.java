@@ -11,6 +11,6 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 	
-	
+	//SERVICES LAI MYSQL DATABASE MA CONNECT GARNA SAKIYO RA POSTMAN BATA TEST GARIYO
 
 }
