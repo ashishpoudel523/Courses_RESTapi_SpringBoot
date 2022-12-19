@@ -15,7 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.entities.Course;
 import com.example.demo.services.CourseService;
 
-@RestController
+//used for making RESTful web services ..this annotation allows the class to handle the requests made my clients
+@RestController  
 public class MyController {
 	
 	@GetMapping("/first")
@@ -23,14 +24,16 @@ public class MyController {
 		return "Welcome to 1st springboot app";
 	}
 	
-	@Autowired
+	//for automatic dependency injection
+	@Autowired  
 	private CourseService courseService;
 	//courseService chai interface ho
 	
 	
 	
 	//Get the Courses
-	@GetMapping("/courses")
+	// GetMapping used to handle GET type of request methods
+	@GetMapping("/courses")     
 	public List<Course> getCourses(){
 		return this.courseService.getCourses();
 		
@@ -45,7 +48,8 @@ public class MyController {
 	}
 	
 	//COURSE ADD
-	@PostMapping("/courses")
+	//@PostMapping annotation maps HTTP POST requests onto specific handler methods.
+	@PostMapping("/courses")    
 	public Course addCourse(@RequestBody Course course) {
 		return this.courseService.addCourse(course);
 	}
